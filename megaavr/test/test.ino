@@ -5,7 +5,7 @@
       SOMEPERIPHERAL.SFR = foo;
     #elif defined(SOMEOTHERPERIPHERAL)
       if (SYSCFG.REVID > 0x08) {
-        SOMEOTHERPERIPHERAL.SFR=getValueForOther(foo);
+SOMEOTHERPERIPHERAL.SFR=getValueForOther(foo);
       }
     #else
       return -1;
