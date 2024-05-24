@@ -106,4 +106,4 @@ jobs:
         uses: ChrisKnightley/uncrustify-check@v1
         with:
           configFile: ${{ env.CONFIG_FILE_PATH }}
-          checkedPaths: megaavr/test
+          checkedPaths: - megaavr/test
