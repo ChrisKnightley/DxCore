@@ -103,6 +103,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Check code formatting
-        uses: ChrisKnightley/actions-uncrustify@v1
+        uses: Daniel-Trevitz/uncrustify-check@v1
         with:
           configPath: ${{ env.CONFIG_FILE_PATH }}
