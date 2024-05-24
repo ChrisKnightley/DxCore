@@ -105,4 +105,5 @@ jobs:
       - name: Check code formatting
         uses: Daniel-Trevitz/uncrustify-check@v1
         with:
-          configPath: ${{ env.CONFIG_FILE_PATH }}
+          configFile: ${{ env.CONFIG_FILE_PATH }}
+          checkedPaths: megaavr/test
