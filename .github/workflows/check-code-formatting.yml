@@ -24,6 +24,7 @@ on:
 
 env:
   OPTIONS_FILE_PATH: megaavr/extras/ci/arduino-code-style.conf
+  CONFIG_FILE_PATH: megaavr/extras/ci/arduino-code-style-uncrustify.conf
   NAME_PATTERNS: |
     - '*.ino'
     - '*.h'
@@ -102,10 +103,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Check code formatting
-        uses: per1234/artistic-style-action@main
+        uses: coleaeason/actions-uncrustify@v1
         with:
-          options-file-path: ${{ env.OPTIONS_FILE_PATH }}
-          name-patterns: |
-            ${{ env.NAME_PATTERNS }}
-          target-paths: |
-            - megaavr/variants
+          configPath: ${{ env.CONFIG_FILE_PATH }}
