@@ -103,10 +103,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Check code formatting
-        uses: coleaeason/actions-uncrustify@v1
+        uses: tatsushi-ikeda/actions-uncrustify@v1
         with:
           configPath: ${{ env.CONFIG_FILE_PATH }}
-          name-patterns: |
-            ${{ env.NAME_PATTERNS }}
-          target-paths: |
-            - megaavr/libraries
