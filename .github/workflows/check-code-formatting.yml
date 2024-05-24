@@ -106,3 +106,7 @@ jobs:
         uses: coleaeason/actions-uncrustify@v1
         with:
           configPath: ${{ env.CONFIG_FILE_PATH }}
+          name-patterns: |
+            ${{ env.NAME_PATTERNS }}
+          target-paths: |
+            - megaavr/libraries
